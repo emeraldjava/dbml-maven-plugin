@@ -17,7 +17,6 @@
                 <artifactId>dbml-maven-plugin</artifactId>
                 <version>${dbml-maven-plugin.version}</version>
                 <configuration>
-<!--                    <generateOnlyServices>false</generateOnlyServices>-->
                 </configuration>
             </plugin>
         </plugins>
