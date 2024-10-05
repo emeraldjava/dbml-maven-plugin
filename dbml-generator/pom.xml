@@ -15,4 +15,27 @@
     <packaging>jar</packaging>
     <name>dbml generator jar</name>
 
+    <properties>
+        <jmustache.version>1.16</jmustache.version>
+        <dbml-java.version>1.0.2</dbml-java.version>
+        <plantuml.version>8059</plantuml.version>
+    </properties>
+
+    <dependencies>
+        <dependency>
+            <groupId>io.github.nilswende</groupId>
+            <artifactId>dbml-java</artifactId>
+            <version>${dbml-java.version}</version>
+        </dependency>
+        <dependency>
+            <groupId>com.samskivert</groupId>
+            <artifactId>jmustache</artifactId>
+            <version>${jmustache.version}</version>
+        </dependency>
+        <dependency>
+            <groupId>net.sourceforge.plantuml</groupId>
+            <artifactId>plantuml</artifactId>
+            <version>${plantuml.version}</version>
+        </dependency>
+    </dependencies>
 </project>
