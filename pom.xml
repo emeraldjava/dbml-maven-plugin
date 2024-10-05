@@ -188,4 +188,12 @@
         </dependencies>
     </dependencyManagement>
 
+    <distributionManagement>
+        <repository>
+            <id>github</id>
+            <name>GitHub emeraldjava Apache Maven Packages</name>
+            <url>https://maven.pkg.github.com/emeraldjava/dbml-maven-plugin</url>
+        </repository>
+    </distributionManagement>
+
 </project>
