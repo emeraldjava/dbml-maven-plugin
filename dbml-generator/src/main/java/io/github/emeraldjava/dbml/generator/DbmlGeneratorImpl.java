@@ -10,8 +10,7 @@ import net.sourceforge.plantuml.FileFormat;
 import net.sourceforge.plantuml.FileFormatOption;
 import net.sourceforge.plantuml.SourceStringReader;
 
-import java.io.ByteArrayOutputStream;
-import java.io.StringWriter;
+import java.io.*;
 import java.nio.charset.Charset;
 
 @Slf4j
@@ -46,9 +45,20 @@ public class DbmlGeneratorImpl implements DbmlGenerator {
      */
     private void jmustache(Object input) {
         String tmpl = "debug{{this}} {{#persons}}{{name}}: {{age}}\n{{/persons}}";
-        StringWriter writer = new StringWriter();
-        Mustache.compiler().compile(tmpl).execute(input,writer);
-        log.info("{}",writer.toString());
+        //Writer writer = new PrintWriter(System.out);
+        Writer writer = new StringWriter();
+
+        File templateDir = null;
+        Mustache.Compiler compiler = Mustache.compiler().withLoader(new Mustache.TemplateLoader() {
+            @Override
+            public Reader getTemplate(String name) throws Exception {
+                return new FileReader(new File(templateDir,name));
+            }
+        });
+
+        String result = compiler.compile(tmpl).execute(input);
+        log.info("{}",result
+        );
     }
 
     /**
