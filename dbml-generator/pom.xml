@@ -1,0 +1,41 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project xmlns="http://maven.apache.org/POM/4.0.0"
+         xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+         xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd">
+    <modelVersion>4.0.0</modelVersion>
+
+    <parent>
+        <groupId>io.github.emeraldjava.dbml</groupId>
+        <artifactId>dbml-maven-plugin-pom</artifactId>
+        <version>1.0-SNAPSHOT</version>
+        <relativePath>../pom.xml</relativePath>
+    </parent>
+
+    <artifactId>dbml-generator</artifactId>
+    <packaging>jar</packaging>
+    <name>dbml generator jar</name>
+
+    <properties>
+        <jmustache.version>1.16</jmustache.version>
+        <dbml-java.version>1.0.2</dbml-java.version>
+        <plantuml.version>8059</plantuml.version>
+    </properties>
+
+    <dependencies>
+        <dependency>
+            <groupId>io.github.nilswende</groupId>
+            <artifactId>dbml-java</artifactId>
+            <version>${dbml-java.version}</version>
+        </dependency>
+        <dependency>
+            <groupId>com.samskivert</groupId>
+            <artifactId>jmustache</artifactId>
+            <version>${jmustache.version}</version>
+        </dependency>
+        <dependency>
+            <groupId>net.sourceforge.plantuml</groupId>
+            <artifactId>plantuml</artifactId>
+            <version>${plantuml.version}</version>
+        </dependency>
+    </dependencies>
+</project>

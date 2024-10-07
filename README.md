@@ -1,6 +1,14 @@
 # dbml-maven-plugin
 
+[![java-build-ci](https://github.com/emeraldjava/dbml-maven-plugin/actions/workflows/build.yml/badge.svg?branch=main)](https://github.com/emeraldjava/dbml-maven-plugin/actions/workflows/build.yml)
+
 A [dbml](github.com/holistics/dbml) maven plugin
+
+Code Site
+- https://github.com/emeraldjava/dbml-maven-plugin
+
+Pages Site
+- https://emeraldjava.github.io/dbml-maven-plugin/
 
 ## References
 
